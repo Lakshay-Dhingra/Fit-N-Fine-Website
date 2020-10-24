@@ -1,0 +1,25 @@
+projvenv/
+secret_settings.py
+
+
+### Django ###
+*.log
+*.pot
+*.pyc
+__pycache__/
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+media
+
+### Django Python Stack ###
+# Byte-compiled / optimized / DLL files
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Translations
+*.mo
+
