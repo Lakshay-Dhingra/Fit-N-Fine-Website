@@ -1,6 +1,6 @@
 projvenv/
 secret_settings.py
-
+debug.log
 
 ### Django ###
 *.log
