@@ -1,0 +1,38 @@
+
+<!-- Logout Modal -->
+<div class="modal fade" id="LogoutModal" tabindex="-1" role="dialog" aria-labelledby="LogoutModalTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+        <div class="modal-header">
+        <h5 class="modal-title" id="LogoutModalLongTitle">Logout</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+        </div>
+
+        <form method="post" class="register-form" action="accounts/logout/">
+        {% csrf_token %}
+            <div class="modal-body">
+                <div class="main_page">
+                    <h4 class="form-heading">Are You Sure, You Want To Log Out?</h4>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <div class="footer_buttons">
+                    <button type="button" id="cancel_button_logout" class="btn btn-info" data-dismiss="modal">Cancel</button>
+                    <button type="submit" class="btn btn-primary">Logout</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    </div>
+</div>
+
+<script>
+    function goToRegister()
+    {
+        document.getElementById("cancel_button_login").click();
+        document.getElementById("register_button").click();
+    }
+</script>
+    
