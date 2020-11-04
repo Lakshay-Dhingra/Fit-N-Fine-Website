@@ -74,7 +74,7 @@ def register(request):
         fname=""
         if len(names)>1:
             lname=names.pop()
-            fname=names.join(" ")
+            fname=" ".join(names)
         else:
             fname=names[0]
 
@@ -86,10 +86,11 @@ def register(request):
             messages.info(request,'This Phone is already registered!')
         else:
             if(authenticate.register(username, fname, lname, password, email, phone)):
-                messages.info(request,'User Registeration Successful!')
+                authenticate.confirmEmail(username,name,email)
+                messages.info(request,'Registeration Successful! You will recieve a verification mail for your account shortly.')
                 return redirect("/#features_section")
             else:
-                messages.info(request,"User Registeration Failed!")
+                messages.info(request,"Registeration Failed!")
 
     return redirect("/")
 
