@@ -18,9 +18,12 @@ class UserDetails(models.Model):
     FITNESS_GOAL_DEFAULT='Improve My Overall Health'
     FITNESS_GOAL_CHOICES = [
         (FITNESS_GOAL_DEFAULT, 'Improve My Overall Health'),
-        ('Improve My Mental Health', 'Improve My Mental Health'),
+        ('Mental Wellness', 'Mental Wellness'),
         ('Spread Awareness About Health and Fitness', 'Spread Awareness About Health and Fitness'),
-        ('Track My Calorie Intake and Burn', 'Track My Calorie Intake and Burn'),
+        ('Reduce Weight', 'Reduce Weight'),
+        ('Gain Weight', 'Gain Weight'),
+        ('Maintain Weight', 'Maintain Weight'),
+        ('Gain Height', 'Gain Height'),
         ('Give Health Consultancy', 'Give Health Consultancy'),
         ('Body Building', 'Body Building'),
         ('Other', 'Other'),
@@ -49,14 +52,45 @@ class UserDetails(models.Model):
         (DEFAULT_GENDER, 'Unknown'),
     ]
     gender=models.CharField(max_length=1, choices=GENDER_CHOICES, default=DEFAULT_GENDER)
-
+    
     age=models.PositiveSmallIntegerField(validators=[MaxValueValidator(150),MinValueValidator(5)], null=True)
+
+    DEFAULT_BLOOD='U'
+    BLOOD_CHOICES = [
+        ('A+ve', 'A+ve'),
+        ('A-ve', 'A-ve'),
+        ('B+ve', 'B+ve'),
+        ('B-ve', 'B-ve'),
+        ('AB+ve', 'AB+ve'),
+        ('AB-ve', 'AB-ve'),
+        ('O+ve', 'O+ve'),
+        ('O-ve', 'O-ve'),
+        ('HH+ve', 'HH+ve'),
+        ('HH-ve', 'HH-ve'),
+        (DEFAULT_BLOOD, 'Unknown'),
+    ]
+    blood_group=models.CharField(max_length=5, choices=BLOOD_CHOICES, default=DEFAULT_BLOOD)
+
+    DEFAULT_RACE='U'
+    RACE_CHOICES = [
+        ('American Indian or Alaska Native', 'American Indian or Alaska Native'),
+        ('Asian', 'Asian'),
+        ('Black or African American', 'Black or African American'),
+        ('White or Caucasian', 'White or Caucasian'),
+        ('Hispanic or Latino', 'Hispanic or Latino'),
+        ('Native Hawaiian or Other Pacific Islander', 'Native Hawaiian or Other Pacific Islander'),
+        (DEFAULT_RACE, 'Unknown'),
+    ]
+    race=models.CharField(max_length=100, choices=RACE_CHOICES, default=DEFAULT_RACE)
+
     height=models.FloatField(validators=[MaxValueValidator(120),MinValueValidator(20)], null=True)
     weight=models.FloatField(validators=[MaxValueValidator(250),MinValueValidator(5)], null=True)
 
     profile_pic=models.ImageField(upload_to="profile_pics/", null=True)
 
     created_at=models.DateTimeField(auto_now=True)
+
+    total_points=models.IntegerField(default=100)
 
     def __str__(self):
         return self.username
