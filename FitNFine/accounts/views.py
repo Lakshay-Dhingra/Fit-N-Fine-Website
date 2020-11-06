@@ -1,8 +1,13 @@
 from django.shortcuts import render,redirect
 from django.contrib import messages
 from django.contrib.auth.models import User,auth
-
+from . import tokens
 from . import authenticate
+
+from django.http import HttpResponse
+from django.contrib.auth import get_user_model
+from django.utils.encoding import force_bytes
+from django.utils.http import urlsafe_base64_encode, urlsafe_base64_decode
 # render syntax:
 # return render(request,'page.html',context_var_dictionary)
 
@@ -86,7 +91,6 @@ def register(request):
             messages.info(request,'This Phone is already registered!')
         else:
             if(authenticate.register(username, fname, lname, password, email, phone)):
-                authenticate.confirmEmail(username,name,email)
                 messages.info(request,'Registeration Successful! You will recieve a verification mail for your account shortly.')
                 return redirect("/#features_section")
             else:
@@ -94,3 +98,18 @@ def register(request):
 
     return redirect("/")
 
+def activate(request, uidb64, token):
+    User = get_user_model()
+    try:
+        uid = urlsafe_base64_decode(uidb64).decode()
+        user = User.objects.get(pk=uid)
+    except(TypeError, ValueError, OverflowError, User.DoesNotExist):
+        user = None
+    if user is not None and tokens.account_token.check_token(user, token):
+        user.is_active = True
+        user.save()
+        messages.info(request,"Thanks for your email confirmation. You can login to your account now.")
+        return redirect("/#features_section")
+    else:
+        messages.info(request,"Invalid Activation link!")
+        return redirect("/")

@@ -1,11 +1,15 @@
-Dear {{name}},
+{% autoescape off %}
+Hi! Dear {{name}},
 
-Hope you're doing well. This is a confirmation mail regarding your Fit N' Fine account.
-Your profile as a 'fitness enthusiast' has been created successfully, but you can edit and build you profile anytime as per your preferences.
+This is a confirmation mail regarding your Fit N' Fine account.
+Your profile as a 'fitness enthusiast' has been created successfully, you can edit and build you profile anytime as per your preferences.
 
-We welcome you to our community, but first you need to verify your account either by clicking on the given link or using the code mentioned below.
+Before getting started, you need to verify your account by clicking on the verification link given below.
 
-Thanks to be a part of our community.
+{{ domain }}{% url 'activate' uidb64=uid token=token %}
+
+Thanks to be a part of our fitness community.
 
 Regards,
 Fit N' Fine Team
+{% endautoescape %}

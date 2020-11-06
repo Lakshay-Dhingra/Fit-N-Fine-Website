@@ -3,9 +3,19 @@ from main_app.models import UserDetails
 from django.core.mail import EmailMessage
 from django.conf import settings
 from django.template.loader import render_to_string
+from django.utils.encoding import force_bytes
+from django.utils.http import urlsafe_base64_encode, urlsafe_base64_decode
+from . import tokens
 
-def confirmEmail(username,name,userEmail):
-    template=render_to_string('accounts/email_template.html',{'name':name,'username':username})
+def sendConfirmEmail(user,name,userEmail):
+    template=render_to_string('accounts/email_template.html',
+        {
+            'name':name,
+            'user':user,
+            'token':tokens.account_token.make_token(user),
+            'uid': urlsafe_base64_encode(force_bytes(user.pk)),
+            'domain': '127.0.0.1:8000',
+        })
     email = EmailMessage(
         "Verify Your Fit N' Fine account",
         template,
@@ -30,9 +40,11 @@ def register(username,fname,lname,password,email,phone):
         user.is_active=False
         user.save()
         userdetails.save()
+        sendConfirmEmail(user,fname,email)
         return True
     except:
         return False
+
 
 def hasRegisteredUsername(username):
     try:
