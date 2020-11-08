@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta Tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Heaven for Fitness Enthusiasts, Fit N' Fine is a platform that tracks your diet, exercise habits and provides a community of fitness enthusiasts, health instructors, physicians and dieticians.">
+    <meta name="keywords" content="Fit, Fit N Fine, Fit N' Fine, Fine, Health, Fitness, Stay Fit, Fitness Community, Calorie Tracker, Exersise Tracker, Activity Tracker, Fitness Enthusiast, Fitness Platform">
+    <meta name="robots" content="INDEX, FOLLOW">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Merienda+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Domine:wght@500&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <title>Fit N' Fine</title>
+</head>
+<body>
+
+    <!-- Navbar-->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light" id="main_navbar">
+            <a class="navbar-brand" href="index.html">Fit N' Fine</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+                <ul class="navbar-nav">
+                  <li class="nav-item active">
+                    <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#features_section">Features</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Contact</a>
+                  </li>
+                  <li class="nav-item">
+                    <button type="button" class="btn btn-link" data-toggle="modal" data-target="#LoginModal">Login</button>
+                  </li>
+                  <li class="nav-item">
+                    <button type="button" class="btn btn-link" data-toggle="modal" data-target="#RegisterModal">Register</button>
+                  </li>
+                </ul>
+            </div>
+          </nav>
+    </header>
+
+    <!-- Profile Section -->
+    <div id="main_profile">
+        <section id="profile_card" class="row">
+            <div id="profile_image" class="col-3">
+            <img src="images/profilepic.jpg" class="img-fluid" alt="Profile Pic"/>
+            </div>
+            <div id="profile_head" class="col-9 row">
+                <div class="col-lg-4">
+                    <h2>Lakshay Dhingra</h2>
+                    <h5>- Fitness Enthusiast</h5>
+                </div>
+                <div class="col-lg-8">
+                    <div class="progress">
+                        <div class="progress-bar bg-info" role="progressbar" style="width:50%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <div>Level-1</div><div>Level-2</div>
+                    </div>
+                    <button type="button" class="btn btn-info">Edit Profile</button>
+                </div>
+            </div>
+        </section>
+        <section id="profile_body" class="row">
+            <section id="left_profile_section" class="col-3">
+                <div>
+                    <h3>About Me:</h3>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Unde fugit officiis velit reiciendis quasi! Nemo omnis a assumenda ad optio rem eos vel laborum natus! Iure atque omnis quasi veritatis reiciendis ullam culpa, asperiores voluptate consectetur ea obcaecati ut odio a natus quod itaque!</p>
+                    <h3>Fitness Goal:</h3>
+                    <p>In eveniet consequuntur deleniti aperiam facere! Unde fugit officiis velit reiciendis quasi!</p>
+                </div>
+            </section>
+            <section id="right_profile_section" class="col-9">
+                <form>
+                <div class="form-group row">
+                    <label forhtml="staticUserId" class="col-sm-2 col-form-label">UserId:</label>
+                    <div class="col-sm-10">
+                    <input type="text" readonly class="form-control-plaintext" id="staticUserId" value="KXP1284017"/>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label forhtml="staticFName" class="col-sm-2 col-form-label">FirstName:</label>
+                    <div class="col-sm-10">
+                    <input type="text" readonly class="form-control-plaintext" id="staticFName" value="Lakshay"/>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label forhtml="staticLName" class="col-sm-2 col-form-label">LastName:</label>
+                    <div class="col-sm-10">
+                    <input type="text" readonly class="form-control-plaintext" id="staticLName" value="Dhingra"/>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label forhtml="staticEmail" class="col-sm-2 col-form-label">Email:</label>
+                    <div class="col-sm-10">
+                    <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="email@example.com"/>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label forhtml="staticAge" class="col-sm-2 col-form-label">Age:</label>
+                    <div class="col-sm-10">
+                    <input type="text" readonly class="form-control-plaintext" id="staticAge" value="20"/>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label forhtml="staticHeight" class="col-sm-2 col-form-label">Height:</label>
+                    <div class="col-sm-10">
+                    <input type="text" readonly class="form-control-plaintext" id="staticHeight" value="5' 9''"/>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label forhtml="staticWeight" class="col-sm-2 col-form-label">Weight:</label>
+                    <div class="col-sm-10">
+                    <input type="text" readonly class="form-control-plaintext" id="staticWeight" value="70 kg"/>
+                    </div>
+                </div>
+                </form>
+            </section>
+        </section>
+    </div>
+
+    
+    <!-- Footer -->
+    <section id="contact_section">
+        <h2>Contact Us</h2>
+        <div class="contact_section_para">Connect With Us On Social Media Platforms And Be A Part Of Fitness Community. In Case You Are Facing Any Issues Or Want To Give Us Any Feedback, Feel Free Mail Us And We Will Get Back To You As Soon As Possible!</div>
+        <div class="row d-flex justify-content-center">
+            <div class="contact-lg-3 contact_icon">
+                <i class="fa fa-envelope fa-3x"></i>
+                <div class="contact_icon_description"><a class="d-block" href="mailto:feedbackqueries@fitnfineapp.com">feedbackqueries@fitnfineapp.com</a></div>
+            </div>
+            <div class="contact-lg-3 contact_icon">
+                <i class="fa fa-facebook fa-3x"></i>
+                <div class="contact_icon_description"><a class="d-block" href="https://www.facebook.com/fitnfineapp/">facebook.com/fitnfineapp/</a></div>
+            </div>
+            <div class="contact-lg-3 contact_icon">
+                <i class="fa fa-twitter fa-3x"></i>
+                <div class="contact_icon_description"><a class="d-block" href="https://www.twitter.com/fitnfineapp/">twitter.com/fitnfineapp/</a></div>
+            </div>
+            <div class="contact-lg-3 contact_icon">
+                <i class="fa fa-instagram fa-3x"></i>
+                <div class="contact_icon_description"><a class="d-block" href="https://www.instagram.com/fitnfineapp/">instagram.com/fitnfineapp/</a></div>
+            </div>
+        </div>
+    </section>
+
+    
+    <!-- JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>

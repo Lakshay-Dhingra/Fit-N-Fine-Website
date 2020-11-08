@@ -27,30 +27,19 @@ html
     opacity: 0.6;
 }
 
-.activitybg::before
-{
-    background-image: url("../images/activity_bg.jpg");
-    /* url('../images/main_bg.jpg'); */
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    content:"";
-    position: absolute;
-    top:0;
-    left:0;
-    width: 100%;
-    height: 110vh;
-    z-index: -1;
-    opacity: 0.3;
-}
-
 /* Navbar */
 #main_navbar
 {
     background-color: transparent;
-    width:92vw;
-    margin:0vh auto;
+    /* background-color: rgba(255, 228, 196,0.7); */
+    width:100%;
+    padding-left: 4vw;
+    padding-right: 4vw;
+    height: 8vh;
+    z-index: 10;
+    /* border: solid; */
 }
+
 #main_navbar .navbar-brand
 {
     font-family: 'Merienda One', cursive;
@@ -91,7 +80,7 @@ html
     text-align: center;
     /* border: solid; */
     margin:0vh 0vw;
-    padding:26vh 15vw;
+    padding:36vh 15vw;
     height:90vh;
 }
 .main_section .jumbotron h1
@@ -103,13 +92,16 @@ html
     font-size: 2em;
 }
 
-
+#features_section
+{
+    margin-top:11vh;
+}
 #features_section .feature
 {
     height:90vh;
     padding:2vh 0vw;
     width:100%;
-    margin: auto;
+    margin:-5vh auto;
     /* border: solid; */
 }
 #features_section .feature_image_odd
@@ -147,24 +139,24 @@ html
     border: solid;
     text-align: center;
     font-family: 'Domine', serif;
-    padding:5vh 8vw;
+    padding:6vh 9vw;
     background-color: rgb(32, 32, 56);
     color: rgb(230, 230, 230);
 }
 #contact_section h2
 {
-    font-weight: 600;
     font-size: 2.2em;
-    margin:5vh 0vh;
+    margin:6vh 0vh;
+    font-family: 'Domine';
 }
 #contact_section .contact_section_para
 {
-    font-size: 1.5em;
-    margin-bottom: 6vh;
+    font-size: 1.3em;
+    margin-bottom: 12vh;
 }
 #contact_section .contact_icon_description
 {
-    font-size: 1.2em;
+    font-size: 1.1em;
     margin: 3vh 1vw 6vh 1vw;
     text-align: center;
     /* border: solid; */
@@ -178,108 +170,11 @@ html
     text-overflow: ellipsis;
 }
 
-
-/* Profile Page CSS */
-#main_profile
-{
-    width:88vw;
-    padding:5vh 0vh;
-    margin:0vh auto;
-}
-#profile_head
-{
-    padding-top:8vh;
-    background-color: aliceblue;
-    border-radius: 10px;
-}
-
-#profile_image img
-{
-    display:block; 
-    height:26vh; 
-    width: 12vw; 
-    margin:0vh auto;
-    border: solid;
-    border-radius: 5px;
-}
-#profile_head button
-{
-    margin:2vh 0vw;
-}
-#profile_body
-{
-    width:88vw;
-    margin:2vh auto;
-}
-#profile_body #left_profile_section
-{
-    padding:2vh 2vw 2vh 1vw;
-    /* border:solid; */
-}
-#profile_body #left_profile_section div
-{
-    /* border:solid; */
-    background-color: aliceblue;
-    padding: 3vh 2vw;
-}
-#profile_body #left_profile_section h3
-{
-    font-size: 1.5em;
-    font-weight: 600;
-    margin:2vh 0vw;
-    color: rgb(69, 69, 69);
-}
-#profile_body label
-{
-    font-size: 1.5em;
-    font-weight: 600;
-    color: rgb(69, 69, 69);
-}
-#profile_body input
-{
-    font-size: 1.3em;
-}
-
-
-/* Activity Page CSS */
-.main_activity
-{
-    /* border:solid; */
-    width:88vw;
-    margin:2vh auto;
-    text-align: center;
-    font-family: 'Domine', serif;
-}
-.main_activity h1
-{
-    padding: 5vh 0vw;
-    background-color: rgba(240, 248, 255,0.5);
-    border-radius: 10px;
-    border: solid darkblue;
-}
-.main_activity h2
-{
-    padding: 5vh 0vw;
-    /* text-decoration: underline; */
-}
-.form_fields
-{
-    /* border:solid; */
-    padding:2vh 3vw 4vh 1vw;
-}
-.form_fields label
-{
-    font-size: 1.5em;
-    font-weight: 600;
-}
-
 /* For displaying messages */
 .top_message
 {
     background-color: rgba(255, 255, 0, 0.5);
 }
-
-
 
 /* For Responsiveness */
 @media only screen and (max-width: 992px)

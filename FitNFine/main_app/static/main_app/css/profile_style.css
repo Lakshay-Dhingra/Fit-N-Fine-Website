@@ -1,0 +1,60 @@
+/* Profile Page CSS */
+#main_profile
+{
+    width:88vw;
+    padding:5vh 0vh;
+    margin:0vh auto;
+}
+#profile_head
+{
+    padding-top:8vh;
+    background-color: aliceblue;
+    border-radius: 10px;
+}
+
+#profile_image img
+{
+    display:block; 
+    height:26vh; 
+    width: 12vw; 
+    margin:0vh auto;
+    border: solid;
+    border-radius: 5px;
+}
+#profile_head button
+{
+    margin:2vh 0vw;
+}
+#profile_body
+{
+    width:88vw;
+    margin:2vh auto;
+}
+#profile_body #left_profile_section
+{
+    padding:2vh 2vw 2vh 1vw;
+    /* border:solid; */
+}
+#profile_body #left_profile_section div
+{
+    /* border:solid; */
+    background-color: aliceblue;
+    padding: 3vh 2vw;
+}
+#profile_body #left_profile_section h3
+{
+    font-size: 1.5em;
+    font-weight: 600;
+    margin:2vh 0vw;
+    color: rgb(69, 69, 69);
+}
+#profile_body label
+{
+    font-size: 1.5em;
+    font-weight: 600;
+    color: rgb(69, 69, 69);
+}
+#profile_body input
+{
+    font-size: 1.3em;
+}

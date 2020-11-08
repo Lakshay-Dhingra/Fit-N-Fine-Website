@@ -1,7 +1,7 @@
     
     <!-- Navbar-->
     <header>
-        <nav class="navbar navbar-expand-lg navbar-light" id="main_navbar">
+        <nav class="navbar navbar-expand-lg navbar-light position-fixed nav_bg" id="main_navbar">
             <a class="navbar-brand" href="index.html">Fit N' Fine</a>
             <button class="navbar-toggler" type="button" onClick="navExpand()" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
@@ -35,5 +35,22 @@
       {% include 'accounts/login.html' %}
       {% include 'accounts/register.html' %}
     {% endif %}
+
+    <script>
+      const navbar = document.getElementById('main_navbar');
+      window.onscroll = () => {
+        if (window.scrollY > 250)
+        {
+          // navbar.style.background="rgba(255, 69,0, 0.8)";
+          navbar.style.background="rgba(255, 228, 196,0.9)";
+          navbar.style.height="7vh";
+        }
+        else
+        {
+          navbar.style.background="transparent";
+          navbar.style.height="8vh";
+        }
+      };
+    </script>
 
     

@@ -1,0 +1,60 @@
+{% extends 'main_app/base.html' %}
+{% load static %}
+
+{% block content %}
+    <!-- Page Background -->
+    <header class="activitybg"></header>
+
+    <!-- Messages -->
+    {% include 'main_app/show_messages.html' %}
+
+    <!-- Navbar -->
+    {% include 'main_app/navbar.html' %}
+
+    <!-- Activity Secttion -->
+    <section class="main_activity">
+        <section>
+            <h1>Activity and Calorie Tracker</h1>
+        </section>
+        <section class="row">
+            <section class="left_activity col-lg-6">
+                <h2>Enter Today's Activity</h2>
+                <form class="form_fields">
+                    <div class="form-group row">
+                        <label for="inputXYZ" class="col-sm-5 col-form-label">Jogging Time:</label>
+                        <div class="col-sm-7">
+                        <input type="" class="form-control" id="inputXYZ" placeholder="Time in Minutes"/>
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label for="inputXYZ" class="col-sm-5 col-form-label">Jogging Time:</label>
+                        <div class="col-sm-7">
+                        <input type="" class="form-control" id="inputXYZ" placeholder="Time in Minutes"/>
+                        </div>
+                    </div>
+                </form>
+            </section>
+
+            <section class="right_calorie col-lg-6">
+                <h2>Enter Today's Calorie Intake</h2>
+                <form class="form_fields">
+                    <div class="form-group row">
+                        <label for="inputXYZ" class="col-sm-5 col-form-label">Jogging Time:</label>
+                        <div class="col-sm-7">
+                        <input type="" class="form-control" id="inputXYZ" placeholder="Time in Minutes"/>
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label for="inputXYZ" class="col-sm-5 col-form-label">Jogging Time:</label>
+                        <div class="col-sm-7">
+                        <input type="" class="form-control" id="inputXYZ" placeholder="Time in Minutes"/>
+                        </div>
+                    </div>
+                    
+                </form>
+            </section>
+        </section>
+    </section>
+{% endblock content %}
