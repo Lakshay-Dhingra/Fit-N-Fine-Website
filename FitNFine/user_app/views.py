@@ -1,8 +1,10 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 
-# Create your views here.
-def profile(request,username):
-    return render(request,'user_app/profile.html')
+# render syntax:
+# return render(request,'page.html',context_var_dictionary)
+
+def profile(request,un):
+    return render(request,'user_app/profile_page.html',{"username":un})
 
 def calorieTracker(request):
     return render(request,'user_app/calorie-tracker.html')
