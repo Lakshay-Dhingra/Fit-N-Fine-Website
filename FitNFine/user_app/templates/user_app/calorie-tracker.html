@@ -2,11 +2,14 @@
 {% load static %}
 
 {% block content %}
-    <!-- Messages -->
-    {% include 'main_app/show_messages.html' %}
+    <!-- Check If user is logged in or not -->
+    {% include 'main_app/user_redirect.html' %}
 
     <!-- Navbar -->
     {% include 'main_app/navbar.html' %}
+
+    <!-- Messages -->
+    {% include 'main_app/show_messages.html' %}
 
     <!-- Activity Secttion -->
     <section class="main_activity">
