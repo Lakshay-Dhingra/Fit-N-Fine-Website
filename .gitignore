@@ -1,4 +1,5 @@
 projvenv/
+venv/
 secret_settings.py
 debug.log
 
