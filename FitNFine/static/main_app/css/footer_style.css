@@ -1,0 +1,38 @@
+#contact_section
+{
+    border: solid;
+    text-align: center;
+    font-family: 'Domine', serif;
+    padding:6vh 9vw;
+    background:linear-gradient(to right, rgb(32, 32, 56), rgb(27, 27, 27));
+    color: rgb(230, 230, 230);
+}
+#contact_section h2
+{
+    font-size: 2.2em;
+    margin:6vh 0vh;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: rgb(220, 220, 220);
+}
+
+#contact_section .contact_section_para
+{
+    font-size: 1.3em;
+    margin-bottom: 12vh;
+}
+#contact_section .contact_icon_description
+{
+    font-size: 1.1em;
+    margin: 3vh 1vw 6vh 1vw;
+    text-align: center;
+    /* border: solid; */
+}
+#contact_section .contact_icon_description a
+{
+    text-decoration: none;
+    color:inherit;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
