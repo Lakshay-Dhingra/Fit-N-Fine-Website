@@ -61,11 +61,13 @@ nav .nav-items li a
   font-size: 18px;
   font-weight: 600;
   text-decoration: none;
+  cursor: pointer;
 }
 nav .nav-items li a:hover
 {
   color: var(--nav_hover_color);
 }
+
 nav form{
   display: flex;
   height: 40px;

@@ -36,3 +36,16 @@
     overflow: hidden;
     text-overflow: ellipsis;
 }
+
+@media (max-width: 500px)
+{
+    #contact_section h2
+    {
+        font-size: 2em;
+    }
+
+    #contact_section .contact_section_para
+    {
+        font-size: 1.1em;
+    }
+}

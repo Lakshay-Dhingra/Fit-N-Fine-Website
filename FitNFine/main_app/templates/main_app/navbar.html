@@ -8,8 +8,8 @@
     <li><a href="{% url 'index' %}">Home</a></li>
     <li><a href="{% url 'index' %}#features_section">About</a></li>
     <li><a href="#">Contact</a></li>
-    <li><a href="#">Login</a></li>
-    <li><a href="#">Register</a></li>
+    <li><a id="login_button" data-toggle="modal" data-target="#LoginModal">Login</a></li>
+    <li><a id="register_button" data-toggle="modal" data-target="#RegisterModal">Register</a></li>
     </div>
     <div class="search-icon">
     <span class="fas fa-search"></span></div>
@@ -21,6 +21,14 @@
     </form>
   </nav>
   
+  {% if user.is_authenticated %}
+  {% include 'accounts/logout.html' %}
+  {% include 'accounts/change_navbar.html' %}
+  {% else %}
+    {% include 'accounts/login.html' %}
+    {% include 'accounts/register.html' %}
+  {% endif %}
+
   <script>
     const menuBtn = document.querySelector(".menu-icon span");
     const searchBtn = document.querySelector(".search-icon");
