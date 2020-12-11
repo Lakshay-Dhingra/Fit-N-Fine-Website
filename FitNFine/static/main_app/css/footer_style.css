@@ -4,7 +4,7 @@
     text-align: center;
     font-family: 'Domine', serif;
     padding:6vh 9vw;
-    background:linear-gradient(to right, rgb(32, 32, 56), rgb(27, 27, 27));
+    background:linear-gradient(to right,rgb(27, 27, 27), rgb(32, 32, 56), rgb(27, 27, 27));
     color: rgb(230, 230, 230);
 }
 #contact_section h2
@@ -47,5 +47,9 @@
     #contact_section .contact_section_para
     {
         font-size: 1.1em;
+    }
+    #contact_section .contact_icon_description
+    {
+        font-size: 0.9em;
     }
 }

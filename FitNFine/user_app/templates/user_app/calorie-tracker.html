@@ -1,7 +1,19 @@
-{% extends 'main_app/base.html' %}
 {% load static %}
 
-{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta Tags -->
+    {% include 'main_app/common_meta.html' %}
+
+    <!-- Link or CSS Tags -->
+    {% include 'main_app/common_css.html' %}
+    <link rel="stylesheet" href="{% static 'user_app/css/calorie-tracker_style.css' %}">
+    <title>Fit N' Fine</title>
+
+</head>
+<body>
+
     <!-- Check If user is logged in or not -->
     {% include 'main_app/user_redirect.html' %}
 
@@ -57,4 +69,11 @@
             </section>
         </section>
     </section>
-{% endblock content %}
+
+    <!-- Footer -->
+    {% include 'main_app/footer.html' %}
+
+    <!-- JavaScript -->
+    {% include 'main_app/common_js.html' %}
+</body>
+</html> 

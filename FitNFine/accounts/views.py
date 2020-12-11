@@ -13,6 +13,7 @@ from django.utils.http import urlsafe_base64_encode, urlsafe_base64_decode
 
 def logout(request):
     auth.logout(request)
+    messages.info(request,"You're Logged Out.")
     return redirect("/")
 
 def login(request):
@@ -21,13 +22,13 @@ def login(request):
 
     #Validation checks
     if(len(username)>50):
-        messages.info(request,"Invalid Username! Username can't have more than 50 characters.")
+        messages.info(request,"Username can't have more than 50 characters!")
     elif(len(username)==0):
-        messages.info(request,"Invalid Username! Username can't be empty.")
+        messages.info(request,"Username can't be empty!")
     elif(len(password)<8):
-        messages.info(request,"Invalid Password! Password can't have less than 8 characters.")
+        messages.info(request,"Password can't have less than 8 characters!")
     elif(len(password)>50):
-        messages.info(request,"Invalid Password! Password can't have more than 50 characters.")
+        messages.info(request,"Password can't have more than 50 characters!")
     else:
         if(authenticate.login(request,username, password)):
             messages.info(request,'Login Successful!')
@@ -46,32 +47,32 @@ def register(request):
 
     #Validation checks
     if(len(username)>50):
-        messages.info(request,"Invalid Username! Username can't have more than 50 characters.")
+        messages.info(request,"Username can't have more than 50 characters!")
     elif(len(username)==0):
-        messages.info(request,"Invalid Username! Username can't be empty.")
+        messages.info(request,"Username can't be empty!")
 
     elif(len(name)==0):
-        messages.info(request,"Invalid Name! Name can't be empty.")
+        messages.info(request,"Name can't be empty!")
     elif(len(name)>50):
-        messages.info(request,"Invalid Name! Name can't have more than 100 characters.")
+        messages.info(request,"Name can't have more than 100 characters!")
 
     elif(len(email)==0):
-        messages.info(request,"Invalid Email! Email can't be empty.")
+        messages.info(request,"Email can't be empty!")
     elif(len(email)>250):
-        messages.info(request,"Invalid Email! Email can't have more than 250 characters.")
+        messages.info(request,"Email can't have more than 250 characters!")
 
     
     elif(len(phone)==0):
-        messages.info(request,"Invalid Phone Number! Phone Number can't be empty.")
+        messages.info(request,"Phone Number can't be empty!")
     elif(len(phone)>10):
-        messages.info(request,"Invalid Phone Number! Phone Number can't have more than 10 characters.")
+        messages.info(request,"Phone Number can't have more than 10 characters!")
 
     elif(len(password)<8):
-        messages.info(request,"Invalid Password! Password can't have less than 8 characters.")
+        messages.info(request,"Password can't have less than 8 characters!")
     elif(len(password)>50):
-        messages.info(request,"Invalid Password! Password can't have more than 50 characters.")
+        messages.info(request,"Password can't have more than 50 characters!")
     elif(password != password2):
-        messages.info(request,"Invalid Password! Confirm Password doesn't match.")
+        messages.info(request,"Confirm Password doesn't match!")
     
     else:
         names=name.split()
@@ -91,7 +92,7 @@ def register(request):
             messages.info(request,'This Phone is already registered!')
         else:
             if(authenticate.register(username, fname, lname, password, email, phone)):
-                messages.info(request,'Registeration Successful! You will recieve a verification mail for your account shortly.')
+                messages.info(request,'Registeration Successful! You will recieve a verification email shortly.')
                 return redirect("/#features_section")
             else:
                 messages.info(request,"Registeration Failed!")
@@ -108,7 +109,7 @@ def activate(request, uidb64, token):
     if user is not None and tokens.account_token.check_token(user, token):
         user.is_active = True
         user.save()
-        messages.info(request,"Thanks for your email confirmation. You can login to your account now.")
+        messages.info(request,"Email Confirmed. You can login to your account now.")
         return redirect("/#features_section")
     else:
         messages.info(request,"Invalid Activation link!")
