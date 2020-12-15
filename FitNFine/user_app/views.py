@@ -8,4 +8,4 @@ def profile(request,un):
     return render(request,'user_app/profile_page.html',public_user_details)
 
 def calorieTracker(request):
-    return render(request,'user_app/calorie-tracker.html')
+    return render(request,'user_app/calorie-tracker.html',{"List":[1,2,3,4]})

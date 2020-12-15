@@ -23,22 +23,112 @@
     <!-- Messages -->
     {% include 'main_app/show_messages.html' %}
 
+    <div class="row" style="width:100vw;"">
+        <div class="col-lg-6 col-12 left_bg"></div>
+        <div class="col-lg-6 col-12 right_bg"></div>
+    </div>
+
+
+
     <!-- Activity Secttion -->
     <section class="main_activity">
         <section>
             <h1>Activity and Calorie Tracker</h1>
         </section>
-        <section class="row">
-            <section class="left_activity col-lg-6">
+        <section class="row" style="width:100vw;">
+            <section class="left_activity col-12 col-lg-6">
                 <h2>Enter Today's Activity</h2>
                 <form class="form_fields">
                     <div class="form-group row">
-                        <label for="inputXYZ" class="col-sm-5 col-form-label">Jogging Time:</label>
+                        <label for="jogging" class="col-sm-5 col-form-label">Jogging:</label>
                         <div class="col-sm-7">
-                        <input type="" class="form-control" id="inputXYZ" placeholder="Time in Minutes"/>
+                        <input type="number" class="form-control" id="jogging" name="jogging" placeholder="Distance in Meters"/>
                         </div>
                     </div>
-
+                    <div class="form-group row">
+                        <label for="running" class="col-sm-5 col-form-label">Running:</label>
+                        <div class="col-sm-7">
+                        <input type="number" class="form-control" id="running" name="running" placeholder="Distance in Meters"/>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="walking" class="col-sm-5 col-form-label">Walking:</label>
+                        <div class="col-sm-7">
+                        <input type="number" class="form-control" id="walking" name="walking" placeholder="Distance in Meters"/>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="dancing" class="col-sm-5 col-form-label">Dancing:</label>
+                        <div class="col-sm-7">
+                        <input type="number" class="form-control" id="dancing" name="dancing" placeholder="Time in Minutes"/>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="swimming" class="col-sm-5 col-form-label">Swimming:</label>
+                        <div class="col-sm-7">
+                        <input type="number" class="form-control" id="swimming" name="swimming" placeholder="Time in Minutes"/>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="bicycling" class="col-sm-5 col-form-label">Bicycling:</label>
+                        <div class="col-sm-7">
+                        <input type="number" class="form-control" id="bicycling" name="bicycling" placeholder="Distance in Meters"/>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="yoga_breathing" class="col-sm-5 col-form-label">Yoga / Breathing:</label>
+                        <div class="col-sm-7">
+                        <input type="number" class="form-control" id="yoga_breathing" name="yoga_breathing" placeholder="Time in Minutes"/>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="yoga_streching" class="col-sm-5 col-form-label">Yoga / Streching:</label>
+                        <div class="col-sm-7">
+                        <input type="number" class="form-control" id="yoga_streching" name="yoga_streching" placeholder="Time in Minutes"/>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="pilates" class="col-sm-5 col-form-label">Pilates / Streching:</label>
+                        <div class="col-sm-7">
+                        <input type="number" class="form-control" id="pilates" name="pilates" placeholder="Time in Minutes"/>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="meditation" class="col-sm-5 col-form-label">Meditation:</label>
+                        <div class="col-sm-7">
+                        <input type="number" class="form-control" id="meditation" name="meditation" placeholder="Time in Minutes"/>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="pushups" class="col-sm-5 col-form-label">Push Ups:</label>
+                        <div class="col-sm-7">
+                        <input type="number" class="form-control" id="pushups" name="pushups" placeholder="Number of Push Ups"/>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="pullups" class="col-sm-5 col-form-label">Pull Ups:</label>
+                        <div class="col-sm-7">
+                        <input type="number" class="form-control" id="pushups" name="pullups" placeholder="Number of Pull Ups"/>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="situps" class="col-sm-5 col-form-label">Sit Ups:</label>
+                        <div class="col-sm-7">
+                        <input type="number" class="form-control" id="situps" name="situps" placeholder="Number of Sit Ups"/>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="weight_lifting" class="col-sm-5 col-form-label">Weight Lifting:</label>
+                        <div class="col-sm-7">
+                        <input type="number" class="form-control" id="weight_lifting" name="weight_lifting" placeholder="(Weight in kg) * (No. of Reps)"/>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="meditation" class="col-sm-5 col-form-label">Boxing:</label>
+                        <div class="col-sm-7">
+                        <input type="number" class="form-control" id="meditation" name="meditation" placeholder="Time in Minutes"/>
+                        </div>
+                    </div>
                     <div class="form-group row">
                         <label for="inputXYZ" class="col-sm-5 col-form-label">Jogging Time:</label>
                         <div class="col-sm-7">
@@ -48,7 +138,7 @@
                 </form>
             </section>
 
-            <section class="right_calorie col-lg-6">
+            <section class="right_calorie col-12 col-lg-6">
                 <h2>Enter Today's Calorie Intake</h2>
                 <form class="form_fields">
                     <div class="form-group row">
